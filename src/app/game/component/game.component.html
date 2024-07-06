@@ -1,0 +1,24 @@
+<div class="m-t-50">
+  <div class="controls">
+    <mat-form-field appearance="outline">
+      <mat-label>Time ms</mat-label>
+      <input [(ngModel)]="timeLimit" matInput type="number">
+    </mat-form-field>
+    <button (click)="startGame()" color="primary" mat-raised-button>Start</button>
+  </div>
+  <div class="score">
+    <span>Gamer: {{ playerScore }}</span>
+    |
+    <span>Computer: {{ computerScore }}</span>
+  </div>
+  <div class="grid">
+    @for (block of blocks; let i = $index; track i) {
+      <div [ngClass]="block"
+           (click)="clickCell(i)">
+      </div>
+    } @empty {
+      Empty
+    }
+  </div>
+</div>
+
