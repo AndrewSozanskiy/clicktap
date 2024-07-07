@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {NgStyle} from "@angular/common";
-import {GameComponent} from "./game/component/game.component";
+import {GameComponent} from "./game/game.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
 
 @Component({
