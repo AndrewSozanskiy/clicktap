@@ -1,7 +1,27 @@
-<mat-toolbar>
-  <mat-toolbar-row>
-    <span class="title-center">Play With Me</span>
-  </mat-toolbar-row>
+<mat-toolbar class="header">
+  @if (authService.currentUserSignal() === null) {
+    <div class="authorization">
+      <!--      @if (router.url !== '/login') {-->
+      <a mat-button routerLink="/login">Login</a>
+      <!--      }-->
+
+      <!--      @if (router.url !== '/register') {-->
+      <a mat-button routerLink="/register">Register</a>
+      <!--      }-->
+    </div>
+  }
+
+  @if (authService.currentUserSignal()) {
+    <div>
+      <button mat-button class="logout-btn" (click)="logout()">Logout</button>
+    </div>
+  }
+
+  @if (authService.currentUserSignal() === null) {
+    <a mat-button routerLink="/">Play With Me</a>
+  } @else {
+    <span class="username">{{ authService.currentUserSignal()?.username }}</span>
+  }
 </mat-toolbar>
-<app-game></app-game>
+<router-outlet></router-outlet>
 <mat-toolbar></mat-toolbar>

@@ -1,5 +1,12 @@
-.title-center {
-  margin: 0 auto;
-  color: #3f51b5;
-  font-weight: bold;
+.header {
+  justify-content: space-between;
+
+  a, .logout-btn, .username {
+    color: #3f51b5;
+    font-weight: bold;
+  }
+
+  .username {
+    font-size: x-large;
+  }
 }

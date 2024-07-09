@@ -1,7 +1,7 @@
 import {Component, OnDestroy} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {NgClass, NgForOf, NgIf} from "@angular/common";
-import {GameResult} from "../modal/game-result.component";
+import {GameResult} from "../modal/game-result/game-result.component";
 import {interval, Subscription} from "rxjs";
 import {MatDialog, MatDialogRef} from "@angular/material/dialog";
 import {MatButton} from "@angular/material/button";
